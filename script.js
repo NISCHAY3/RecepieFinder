@@ -30,24 +30,6 @@ const addEventOnElements = function (elements, eventType, callback) {
 
 
 /**
- * NAVBAR
- */
-
-const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const overlay = document.querySelector("[data-overlay]");
-
-const toggleNavbar = function () {
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("nav-active");
-}
-
-addEventOnElements(navTogglers, "click", toggleNavbar);
-
-
-
-/**
  * HEADER & BACK TOP BTN
  */
 
@@ -141,30 +123,3 @@ addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function
 addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
 
 window.addEventListener("load", autoSlide);
-
-
-
-/**
- * PARALLAX EFFECT
- */
-
-// const parallaxItems = document.querySelectorAll("[data-parallax-item]");
-
-// let x, y;
-
-// window.addEventListener("mousemove", function (event) {
-
-//     x = (event.clientX / window.innerWidth * 10) - 5;
-//     y = (event.clientY / window.innerHeight * 10) - 5;
-
-//     // reverse the number eg. 20 -> -20, -5 -> 5
-//     x = x - (x * 2);
-//     y = y - (y * 2);
-
-//     for (let i = 0, len = parallaxItems.length; i < len; i++) {
-//         x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
-//         y = y * Number(parallaxItems[i].dataset.parallaxSpeed);
-//         parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
-//     }
-
-// });
